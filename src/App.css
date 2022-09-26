@@ -1,27 +1,49 @@
 .opciones {
 display: grid;
-grid-template-colums: 1fr 1fr 1fr;
+grid-template-columns: 500px repeat(auto-fill, 400px) 400px;
 justify-items: center;
+
 }
 
 .opcion {
+background-image: url('/public/imagenes/Papel.png') center;
+background-size: cover;
 font-size: 30px;
 border:5px solid black;
 border-radius: 50%;
-padding: 40px;
+margin: 100px 0px;
+padding: 20px;
 cursor: pointer;
+justify-items: center;
+}
+
+.opcion:hover {
+/*background-color: rgb(255,255,255);*/
+background: url('/public/imagenes/Papel.png') center;
+background-size: cover;
+cursor: pointer;
+color: black;
+
 }
 
 .body {
 background-image: radial-gradient(circle 800px at center, #4F3E84 1%, #231944 100%);
-
 }
 
 .App {
 color: white;
-
+justify-items: right;
+padding: 20px 50px;
+text-align: center;
 }
 
 .resultadoFinal {
-justify-items: center;
+text-align: center;
 }
+
+.integrantes {
+color: white;
+text-align: center;
+text-justify: center;
+}
+
