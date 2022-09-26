@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Opcion from './Opcion';
 import './App.css';
 import Resultado from './Resultado';
@@ -14,23 +14,22 @@ function App(){
 
 	
 	
-	
 	const opciones = [
 	{
 		eleccion: "piedra",
 		derrota: "tijera",
-		imagen:[(<img src={piedra} className="piedra" alt="piedra" />)]
+		imagen:[(<img src={piedra} className="piedra" alt="piedra" width="100" height="auto" />)]
 	},
 	{
 		eleccion: "papel",
 		derrota: "piedra",
-		imagen:[(<img src={papel} className="papel" alt="papel" />)]
+		imagen:[(<img src={papel} className="papel" alt="papel" width="100" height="auto"/>)]
 
 	},
 	{
 		eleccion: "tijera",
 		derrota: "papel",
-		imagen:[(<img src={tijera} className="tijera" alt="tijera" />)]
+		imagen:[(<img src={tijera} className="tijera" alt="tijera" width="100" height="auto"/>)]
 	}
 	]
 	
@@ -52,17 +51,21 @@ function App(){
 	<div className="App">
 	<Resultado className="resultadoFinal" jugador={eleccionJugador} maquina={eleccionMaquina}/>
 	<main>
-	<section>
-		<div className="Jugador"> Jugador </div>
-		<div className="eleccion"> {eleccionJugador.eleccion} </div>
-		<div className="eleccion"> {eleccionJugador.imagen} </div>
-	</section>
-	<section>
-		<div className="maquina"> Maquina </div>
-		<div className="eleccion"> {eleccionMaquina.eleccion}</div>
-		<div className="eleccion"> {eleccionMaquina.imagen} </div>
+	   	
+	<div className="participantes">
+		<section>
+			<div className="Jugador"> Jugador </div>
+			<div className="eleccion"> {eleccionJugador.eleccion} </div>
+			<div className="eleccion"> {eleccionJugador.imagen} </div>
+		</section>
+		<section>
+			<div className="maquina"> Maquina </div>
+			<div className="eleccion"> {eleccionMaquina.eleccion}</div>
+			<div className="eleccion"> {eleccionMaquina.imagen} </div>
+	
 
 	</section>
+	</div>
 	</main>
 	
 	
@@ -76,8 +79,16 @@ function App(){
 	
 	</div>
 	<footer className="footer">
-	<h3 > Integrantes</h3>
-	<h4 className="integrantes"> Alfonso Ulises - Genaro Montiel - Lisandro Corredoyra - Jorgelin Chañi - Jose Castro - Emanuel Avila </h4>
+	<h3 className= "titulo-integrantes"> Integrantes</h3>
+	<div className="integrantes">
+	<h4 className="Alfonso"> Alfonso Ulises </h4>
+	<h4 className="Montiel"> Genaro Montiel </h4>
+	<h4 className="Corredoyra"> Lisandro Corredoyra </h4>
+	<h4 className="Chañi"> Jorgelin Chañi </h4>
+	<h4 className="Castro"> Jose Castro </h4>
+	<h4 className="Avila"> Emanuel Avila </h4>
+	 
+	</div>
 	</footer>
 	</body>
 	
